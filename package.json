@@ -1,46 +1,72 @@
 {
-  "name": "temp-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "electron": "^15.0.0"
-  }
+    "name": "temp-react",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "@types/jest": "^26.0.15",
+        "@types/node": "^12.0.0",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "4.0.3",
+        "typescript": "^4.1.2",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "dev:main": "cross-env NODE_ENV=development electron -r ./scripts/BabelRegister ./electron/main.ts",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-proposal-decorators": "^7.12.1",
+        "@babel/plugin-proposal-do-expressions": "^7.12.1",
+        "@babel/plugin-proposal-export-default-from": "^7.12.1",
+        "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
+        "@babel/plugin-proposal-function-bind": "^7.12.1",
+        "@babel/plugin-proposal-function-sent": "^7.12.1",
+        "@babel/plugin-proposal-json-strings": "^7.12.1",
+        "@babel/plugin-proposal-logical-assignment-operators": "^7.12.1",
+        "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+        "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+        "@babel/plugin-proposal-pipeline-operator": "^7.12.1",
+        "@babel/plugin-proposal-throw-expressions": "^7.12.1",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/plugin-syntax-import-meta": "^7.10.4",
+        "@babel/plugin-transform-react-constant-elements": "^7.12.1",
+        "@babel/plugin-transform-react-inline-elements": "^7.12.1",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.12.7",
+        "@babel/preset-react": "^7.12.7",
+        "@babel/preset-typescript": "^7.12.7",
+        "@babel/register": "7.12.1",
+        "babel-plugin-dev-expression": "^0.2.2",
+        "cross-env": "^7.0.3",
+        "electron": "^15.0.0"
+    }
 }
