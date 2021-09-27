@@ -1,4 +1,5 @@
 import { app, BrowserWindow } from 'electron';
+import * as path from 'path';
 
 function createWindow() {
     // 打开窗口
@@ -11,7 +12,9 @@ function createWindow() {
         }
     });
 
-    win.loadURL('http://localhost:3000');
+
+    const isDev = process.env.NODE_ENV === 'development';
+    win.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '..')}/build/index.html`);
 }
 
 app.whenReady().then(() => {
