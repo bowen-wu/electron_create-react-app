@@ -18,6 +18,9 @@
     },
     "scripts": {
         "dev:main": "cross-env NODE_ENV=development electron -r ./scripts/BabelRegister ./electron/main.ts",
+        "start:renderer": "react-app-rewired start",
+        "build:renderer": "react-app-rewired build",
+        "test:renderer": "react-app-rewired test",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -67,6 +70,7 @@
         "@babel/register": "7.12.1",
         "babel-plugin-dev-expression": "^0.2.2",
         "cross-env": "^7.0.3",
-        "electron": "^15.0.0"
+        "electron": "^15.0.0",
+        "react-app-rewired": "^2.1.8"
     }
 }
