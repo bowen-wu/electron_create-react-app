@@ -17,6 +17,7 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
+        "build:main": "webpack --config ./config/webpack.main.js",
         "dev:main": "cross-env NODE_ENV=development electron -r ./scripts/BabelRegister ./electron/main.ts",
         "start:renderer": "react-app-rewired start",
         "build:renderer": "react-app-rewired build",
@@ -68,9 +69,14 @@
         "@babel/preset-react": "^7.12.7",
         "@babel/preset-typescript": "^7.12.7",
         "@babel/register": "7.12.1",
+        "babel-loader": "8.1.0",
         "babel-plugin-dev-expression": "^0.2.2",
         "cross-env": "^7.0.3",
         "electron": "^15.0.0",
-        "react-app-rewired": "^2.1.8"
+        "react-app-rewired": "^2.1.8",
+        "terser-webpack-plugin": "4",
+        "webpack": "4",
+        "webpack-cli": "4",
+        "webpack-merge": "4"
     }
 }
