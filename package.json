@@ -22,16 +22,12 @@
         "webpack-merge": "^5.8.0"
     },
     "scripts": {
-        "pack:electron": "yarn build:renderer && yarn build:main && ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ electron-builder build --publish never --config ./config/builder.js",
+        "pack:electron": "yarn build:renderer && yarn build:main && electron-builder build --publish never --config ./config/builder.js",
         "build:renderer": "react-app-rewired build",
         "build:main": "webpack --config ./config/webpack.main.js",
         "dev:main": "cross-env NODE_ENV=development electron -r ./scripts/BabelRegister ./electron/main.ts",
         "start:renderer": "react-app-rewired start",
-        "test:renderer": "react-app-rewired test",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "test:renderer": "react-app-rewired test"
     },
     "eslintConfig": {
         "extends": [
